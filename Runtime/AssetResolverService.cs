@@ -10,7 +10,7 @@ using System.Collections;
 using Cysharp.Threading.Tasks;
 using System.Threading.Tasks;
 
-namespace GameLovers.AssetsImporter
+namespace Geuneda.AssetsImporter
 {
 	/// <summary>
 	/// Service to extend the behaviour to load assets into the project based on it's own custom needs

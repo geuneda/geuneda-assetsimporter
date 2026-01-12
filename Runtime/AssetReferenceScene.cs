@@ -3,7 +3,7 @@ using UnityEngine.AddressableAssets;
 
 // ReSharper disable once CheckNamespace
 
-namespace GameLovers.AssetsImporter
+namespace Geuneda.AssetsImporter
 {
 	/// <summary>
 	/// Implementation of a <see cref="AssetReference"/> for scenes

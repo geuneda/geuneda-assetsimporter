@@ -3,7 +3,7 @@ using UnityEngine;
 
 // ReSharper disable once CheckNamespace
 
-namespace GameLoversEditor.AssetsImporter
+namespace GeunedaEditor.AssetsImporter
 {
 	/// <summary>
 	/// Scriptable Object with the Addressables Id Generator settings

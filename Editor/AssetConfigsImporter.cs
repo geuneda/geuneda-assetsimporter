@@ -1,5 +1,5 @@
-using GameLovers;
-using GameLovers.AssetsImporter;
+using Geuneda;
+using Geuneda.AssetsImporter;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +10,7 @@ using UnityEngine.AddressableAssets;
 
 // ReSharper disable once CheckNamespace
 
-namespace GameLoversEditor.AssetsImporter
+namespace GeunedaEditor.AssetsImporter
 {
 	/// <summary>
 	/// Asset importers allow to create custom in editor time processors of specific assets in the project.
@@ -250,7 +250,7 @@ namespace GameLoversEditor.AssetsImporter
 		{
 			var stringBuilder = new StringBuilder();
 
-			stringBuilder.AppendLine("using GameLovers.AssetsImporter;");
+			stringBuilder.AppendLine("using Geuneda.AssetsImporter;");
 			stringBuilder.AppendLine("using Game.Ids;");
 			stringBuilder.AppendLine("using UnityEngine;");
 			stringBuilder.AppendLine("");

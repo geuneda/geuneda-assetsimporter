@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 // ReSharper disable CheckNamespace
 
-namespace GameLovers.AssetsImporter
+namespace Geuneda.AssetsImporter
 {
 	/// <summary>
 	/// Helper class with util improvements for loading methods

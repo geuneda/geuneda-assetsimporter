@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 // ReSharper disable CheckNamespace
 
-namespace GameLovers.AssetsImporter
+namespace Geuneda.AssetsImporter
 {
 	/// <summary>
 	/// This interface allows to wrap the scene loading scheme into an object reference

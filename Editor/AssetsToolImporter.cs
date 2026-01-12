@@ -1,4 +1,4 @@
-using GameLovers.AssetsImporter;
+using Geuneda.AssetsImporter;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -8,7 +8,7 @@ using UnityEngine;
 
 // ReSharper disable once CheckNamespace
 
-namespace GameLoversEditor.AssetsImporter
+namespace GeunedaEditor.AssetsImporter
 {
 	/// <summary>
 	/// Customizes the visual inspector of the importing tool <seealso cref="AssetsImporter"/>

@@ -1,4 +1,4 @@
-using GameLovers.AssetsImporter;
+using Geuneda.AssetsImporter;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -10,7 +10,7 @@ using UnityEngine.Assertions;
 
 // ReSharper disable once CheckNamespace
 
-namespace GameLoversEditor.AssetsImporter
+namespace GeunedaEditor.AssetsImporter
 {
 	/// <summary>
 	/// Customizes the visual inspector of the Addressable Ids Generator settings asset <seealso cref="AddressablesIdGeneratorSettings"/>
@@ -99,7 +99,7 @@ namespace GameLoversEditor.AssetsImporter
 			stringBuilder.AppendLine("");
 			stringBuilder.AppendLine("using System.Collections.Generic;");
 			stringBuilder.AppendLine("using System.Collections.ObjectModel;");
-			stringBuilder.AppendLine("using GameLovers.AssetsImporter;");
+			stringBuilder.AppendLine("using Geuneda.AssetsImporter;");
 			stringBuilder.AppendLine("");
 			stringBuilder.AppendLine("// ReSharper disable InconsistentNaming");
 			stringBuilder.AppendLine("// ReSharper disable once CheckNamespace");

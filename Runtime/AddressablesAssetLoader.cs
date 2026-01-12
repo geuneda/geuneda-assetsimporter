@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 // ReSharper disable once CheckNamespace
 
-namespace GameLovers.AssetsImporter
+namespace Geuneda.AssetsImporter
 {
 	/// <summary>
 	/// The asset loader to use with Addressables

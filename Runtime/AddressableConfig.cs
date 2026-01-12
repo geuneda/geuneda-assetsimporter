@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 
 // ReSharper disable once CheckNamespace
 
-namespace GameLovers.AssetsImporter
+namespace Geuneda.AssetsImporter
 {
 	/// <summary>
 	/// Represents a configuration of an Addressable with all it's important data

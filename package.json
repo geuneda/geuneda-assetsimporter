@@ -1,17 +1,17 @@
 {
-  "name": "com.gamelovers.assetsimporter",
+  "name": "com.geuneda.assetsimporter",
   "displayName": "Unity Assets Importer",
-  "author": "Miguel Tomas",
+  "author": "geuneda",
   "version": "0.5.1",
   "unity": "2022.3",
   "license": "MIT",
-  "description": "This package extends the loading functionality of assets from Unity Addressables with the possibility to generate new info about each asset addressable.\nThis package also gives flexibitlity to extend the asset import pipeline to have many scriptable objects to include weaklinks of every asset in the game, separated by type.\n\nThe asset info generator can be executed in Tools > Generate AddressableIds",
+  "description": "Unity Addressables의 에셋 로딩 기능을 확장하여 각 Addressable 에셋에 대한 새로운 정보를 생성할 수 있는 패키지입니다.\n\n이 패키지는 에셋 임포트 파이프라인을 확장하여 게임 내 모든 에셋의 약한 참조(weak link)를 타입별로 분리된 여러 ScriptableObject에 포함할 수 있는 유연성을 제공합니다.\n\n에셋 정보 생성은 Tools > Generate AddressableIds에서 실행할 수 있습니다.",
   "type": "library",
   "hideInEditor": false,
   "dependencies": {
     "com.unity.addressables": "1.21.20",
-    "com.gamelovers.dataextensions": "0.6.0",
-    "com.gamelovers.configsprovider": "0.1.1",
+    "com.geuneda.dataextensions": "0.6.0",
+    "com.geuneda.configsprovider": "0.1.1",
     "com.cysharp.unitask": "2.5.10"
   }
 }

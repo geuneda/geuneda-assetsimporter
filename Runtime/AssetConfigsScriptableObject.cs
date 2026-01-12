@@ -1,4 +1,4 @@
-using GameLovers.ConfigsProvider;
+using Geuneda.ConfigsProvider;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,7 +7,7 @@ using UnityEngine.AddressableAssets;
 
 // ReSharper disable once CheckNamespace
 
-namespace GameLovers.AssetsImporter
+namespace Geuneda.AssetsImporter
 {
 	/// <summary>
 	/// Abstract base class for asset configuration scriptable objects.
