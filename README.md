@@ -15,10 +15,9 @@ Unity Addressables의 에셋 로딩 기능을 확장하는 패키지입니다.
 
 ## 요구 사항
 
-- Unity 2022.3 이상
+- Unity 6000.0 이상
 - Unity Addressables 패키지 (`com.unity.addressables`)
-- Geuneda Data Extensions 패키지 (`com.geuneda.dataextensions`)
-- Geuneda Configs Provider 패키지 (`com.geuneda.configsprovider`)
+- Geuneda GameData 패키지 (`com.geuneda.gamedata`)
 - UniTask 패키지 (`com.cysharp.unitask`)
 
 ## 설치 방법

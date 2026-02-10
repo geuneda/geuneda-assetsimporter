@@ -1,4 +1,4 @@
-using Geuneda.ConfigsProvider;
+using Geuneda.GameData;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
