@@ -13,39 +13,39 @@ using UnityEngine.AddressableAssets;
 namespace GeunedaEditor.AssetsImporter
 {
 	/// <summary>
-	/// Asset importers allow to create custom in editor time processors of specific assets in the project.
-	/// They import their correspondent asset type and map it inside a container with their respective id.
+	/// 에셋 임포터는 프로젝트의 특정 에셋에 대해 에디터 시간에 커스텀 프로세서를 생성할 수 있게 합니다.
+	/// 해당 에셋 타입을 임포트하고 각각의 ID와 함께 컨테이너 안에 매핑합니다.
 	/// </summary>
 	public interface IAssetConfigsImporter
 	{
 		/// <summary>
-		/// The type of scriptable object that will be saved. Helper to cast the scriptable object type at runtime
+		/// 저장될 ScriptableObject의 타입입니다. 런타임에 ScriptableObject 타입을 캐스팅하기 위한 헬퍼입니다
 		/// </summary>
 		Type ScriptableObjectType { get; }
 
 		/// <summary>
-		/// Imports all assets belonging to this asset config scope into a defined container
+		/// 이 에셋 설정 범위에 속하는 모든 에셋을 정의된 컨테이너로 임포트합니다
 		/// </summary>
 		void Import(string assetsFolderPath = null);
 	}
 
 	/// <summary>
-	/// Interface for asset importers that generate asset configuration data.
+	/// 에셋 설정 데이터를 생성하는 에셋 임포터를 위한 인터페이스입니다.
 	/// </summary>
 	public interface IAssetConfigsGeneratorImporter : IAssetConfigsImporter
 	{
 		/// <summary>
-		/// Gets the name of the identifier type.
+		/// 식별자 타입의 이름을 가져옵니다.
 		/// </summary>
 		string TIdName { get; }
 
 		/// <summary>
-		/// Gets the name of the scriptable object type.
+		/// ScriptableObject 타입의 이름을 가져옵니다.
 		/// </summary>
 		string TScriptableObjectName { get; }
 
 		/// <summary>
-		/// Gets a value indicating whether the generated script should be cached.
+		/// 생성된 스크립트를 캐시해야 하는지 여부를 나타내는 값을 가져옵니다.
 		/// </summary>
 		bool CacheScriptAsOld { get; }
 	}
@@ -61,7 +61,7 @@ namespace GeunedaEditor.AssetsImporter
 
 	/// <inheritdoc cref="IAssetConfigsImporter"/>
 	/// <remarks>
-	/// It will save the asset data into a scriptable object of <typeparamref name="TScriptableObject"/> type
+	/// 에셋 데이터를 <typeparamref name="TScriptableObject"/> 타입의 ScriptableObject에 저장합니다
 	/// </remarks>
 	public abstract class AssetsConfigsImporterBase<TId, TAsset, TScriptableObject> : IAssetConfigsImporter
 		where TScriptableObject : AssetConfigsScriptableObject<TId, TAsset>
@@ -73,11 +73,11 @@ namespace GeunedaEditor.AssetsImporter
 		public virtual Type AssetType => typeof(TAsset);
 
 		/// <summary>
-		/// Gets an array of identifiers for the assets being imported.
+		/// 임포트되는 에셋의 식별자 배열을 가져옵니다.
 		/// </summary>
 		/// <remarks>
-		/// This property is abstract and must be implemented by derived classes.
-		/// It is used to retrieve the identifiers for the assets being imported.
+		/// 이 속성은 추상이며 파생 클래스에서 구현해야 합니다.
+		/// 임포트되는 에셋의 식별자를 가져오는 데 사용됩니다.
 		/// </remarks>
 		protected abstract TId[] Ids { get; }
 

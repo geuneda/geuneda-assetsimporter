@@ -11,7 +11,7 @@ using UnityEngine;
 namespace GeunedaEditor.AssetsImporter
 {
 	/// <summary>
-	/// Customizes the visual inspector of the importing tool <seealso cref="AssetsImporter"/>
+	/// 임포트 도구 <seealso cref="AssetsImporter"/>의 비주얼 인스펙터를 커스터마이즈합니다
 	/// </summary>
 	[CustomEditor(typeof(AssetsImporter))]
 	public class AssetsToolImporter : Editor
@@ -90,7 +90,7 @@ namespace GeunedaEditor.AssetsImporter
 
 			if (_importers == null)
 			{
-				// Not yet initialized. Will initialized as soon has all scripts finish compiling
+				// 아직 초기화되지 않았습니다. 모든 스크립트 컴파일이 완료되면 초기화됩니다
 				return;
 			}
 

@@ -8,23 +8,23 @@ using UnityEngine.SceneManagement;
 namespace Geuneda.AssetsImporter
 {
 	/// <summary>
-	/// This interface allows to wrap the scene loading scheme into an object reference
+	/// 이 인터페이스는 씬 로딩 방식을 객체 참조로 래핑할 수 있게 합니다
 	/// </summary>
 	public interface ISceneLoader
 	{
 		/// <summary>
-		/// Loads any scene in the given <paramref name="path"/> with the given parameter configuration.
-		/// To help the execution of this method is recommended to request the scene path from an <seealso cref="AddressableConfig"/>.
-		/// Invokes <paramref name="onCompleteCallback"/> when the scene is loaded.
-		/// This method can be controlled in an async method and returns the asset loaded
+		/// 주어진 <paramref name="path"/>에서 지정된 매개변수 설정으로 씬을 로드합니다.
+		/// 이 메서드의 실행을 돕기 위해 <seealso cref="AddressableConfig"/>에서 씬 경로를 요청하는 것을 권장합니다.
+		/// 씬이 로드되면 <paramref name="onCompleteCallback"/>을 호출합니다.
+		/// 이 메서드는 비동기 메서드에서 제어할 수 있으며 로드된 에셋을 반환합니다
 		/// </summary>
 		UniTask<Scene> LoadSceneAsync(string path, LoadSceneMode loadMode = LoadSceneMode.Single, 
 			bool activateOnLoad = true, Action<Scene> onCompleteCallback = null);
 
 		/// <summary>
-		/// Unloads the given <paramref name="scene"/> from the game memory.
-		/// Invokes <paramref name="onCompleteCallback"/> when the scene is loaded.
-		/// This method can be controlled in an async method
+		/// 주어진 <paramref name="scene"/>을 게임 메모리에서 언로드합니다.
+		/// 씬이 언로드되면 <paramref name="onCompleteCallback"/>을 호출합니다.
+		/// 이 메서드는 비동기 메서드에서 제어할 수 있습니다
 		/// </summary>
 		UniTask UnloadSceneAsync(Scene scene, Action onCompleteCallback = null);
 	}

@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 namespace Geuneda.AssetsImporter
 {
 	/// <summary>
-	/// The asset loader to use with Addressables
+	/// Addressables와 함께 사용하는 에셋 로더
 	/// </summary>
 	public class AddressablesAssetLoader : IAssetLoader, ISceneLoader
 	{			 
@@ -59,7 +59,7 @@ namespace Geuneda.AssetsImporter
 		public async UniTask UnloadAssetAsync<T>(T asset, Action onCompleteCallback = null)
 		{
 			Addressables.Release(asset);
-			// Force a garbage collection and unload unused assets
+			// 가비지 컬렉션을 강제 실행하고 사용하지 않는 에셋을 언로드합니다
 			GC.Collect();
 			GC.WaitForPendingFinalizers();
 

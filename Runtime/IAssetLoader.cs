@@ -7,43 +7,43 @@ using UnityEngine;
 namespace Geuneda.AssetsImporter
 {
 	/// <summary>
-	/// This interface allows to wrap the asset loading scheme into an object reference
+	/// 이 인터페이스는 에셋 로딩 방식을 객체 참조로 래핑할 수 있게 합니다
 	/// </summary>
 	public interface IAssetLoader
 	{
 		/// <summary>
-		/// Loads any asset of the given <typeparamref name="T"/> in the given <paramref name="key"/>.
-		/// To help the execution of this method is recommended to request the asset path from an <seealso cref="AddressableConfig"/>.
-		/// Invokes <paramref name="onCompleteCallback"/> when the asset is loaded.
-		/// This method can be controlled in an async method and returns the asset loaded.
+		/// 주어진 <paramref name="key"/>에서 지정된 <typeparamref name="T"/> 타입의 에셋을 로드합니다.
+		/// 이 메서드의 실행을 돕기 위해 <seealso cref="AddressableConfig"/>에서 에셋 경로를 요청하는 것을 권장합니다.
+		/// 에셋이 로드되면 <paramref name="onCompleteCallback"/>을 호출합니다.
+		/// 이 메서드는 비동기 메서드에서 제어할 수 있으며 로드된 에셋을 반환합니다.
 		/// </summary>
 		UniTask<T> LoadAssetAsync<T>(object key, Action<T> onCompleteCallback = null);
 
 		/// <summary>
-		/// Loads and instantiates the prefab in the given <paramref name="key"/> with the given <paramref name="parent"/>
-		/// and the given <paramref name="instantiateInWorldSpace"/> to preserve the instance transform relative to world
-		/// space or relative to the parent.
-		/// To help the execution of this method is recommended to request the asset path from an <seealso cref="AddressableConfig"/>.
-		/// Invokes <paramref name="onCompleteCallback"/> when the asset is instantiated.
-		/// This method can be controlled in an async method and returns the prefab instantiated
+		/// 주어진 <paramref name="key"/>의 프리팹을 주어진 <paramref name="parent"/>와
+		/// 주어진 <paramref name="instantiateInWorldSpace"/>로 로드 및 인스턴스화합니다.
+		/// 월드 공간 기준 또는 부모 기준으로 인스턴스 트랜스폼을 유지합니다.
+		/// 이 메서드의 실행을 돕기 위해 <seealso cref="AddressableConfig"/>에서 에셋 경로를 요청하는 것을 권장합니다.
+		/// 에셋이 인스턴스화되면 <paramref name="onCompleteCallback"/>을 호출합니다.
+		/// 이 메서드는 비동기 메서드에서 제어할 수 있으며 인스턴스화된 프리팹을 반환합니다
 		/// </summary>
-		UniTask<GameObject> InstantiateAsync(object key, Transform parent, bool instantiateInWorldSpace, 
+		UniTask<GameObject> InstantiateAsync(object key, Transform parent, bool instantiateInWorldSpace,
 			Action<GameObject> onCompleteCallback = null);
 
 		/// <summary>
-		/// Loads and instantiates the prefab in the given <paramref name="key"/> with the given <paramref name="position"/>,
-		/// the given <paramref name="rotation"/> & the given <paramref name="parent"/>.
-		/// To help the execution of this method is recommended to request the asset path from an <seealso cref="AddressableConfig"/>.
-		/// Invokes <paramref name="onCompleteCallback"/> when the asset is instantiated.
-		/// This method can be controlled in an async method and returns the prefab instantiated
+		/// 주어진 <paramref name="key"/>의 프리팹을 주어진 <paramref name="position"/>,
+		/// 주어진 <paramref name="rotation"/> 및 주어진 <paramref name="parent"/>로 로드 및 인스턴스화합니다.
+		/// 이 메서드의 실행을 돕기 위해 <seealso cref="AddressableConfig"/>에서 에셋 경로를 요청하는 것을 권장합니다.
+		/// 에셋이 인스턴스화되면 <paramref name="onCompleteCallback"/>을 호출합니다.
+		/// 이 메서드는 비동기 메서드에서 제어할 수 있으며 인스턴스화된 프리팹을 반환합니다
 		/// </summary>
-		UniTask<GameObject> InstantiateAsync(object key, Vector3 position, Quaternion rotation, Transform parent, 
+		UniTask<GameObject> InstantiateAsync(object key, Vector3 position, Quaternion rotation, Transform parent,
 			Action<GameObject> onCompleteCallback = null);
 
 		/// <summary>
-		/// Unloads the given <paramref name="asset"/> from the game memory.
-		/// If <typeparamref name="T"/> is of <seealso cref="GameObject"/> type, then will also destroy it
-		/// Invokes <paramref name="onCompleteCallback"/> when the asset is unloaded.
+		/// 주어진 <paramref name="asset"/>을 게임 메모리에서 언로드합니다.
+		/// <typeparamref name="T"/>가 <seealso cref="GameObject"/> 타입인 경우 파괴도 수행합니다.
+		/// 에셋이 언로드되면 <paramref name="onCompleteCallback"/>을 호출합니다.
 		/// </summary>
 		UniTask UnloadAssetAsync<T>(T asset, Action onCompleteCallback = null);
 	}

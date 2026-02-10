@@ -6,7 +6,7 @@ using UnityEngine;
 namespace GeunedaEditor.AssetsImporter
 {
 	/// <summary>
-	/// Scriptable Object with the Addressables Id Generator settings
+	/// Addressables Id 생성기 설정을 담는 ScriptableObject
 	/// </summary>
 	[CreateAssetMenu(fileName = "AddressablesIdGenerator Settings", menuName = "ScriptableObjects/Editor/AddressablesIdGenerator")]
 	public class AddressablesIdGeneratorSettings : ScriptableObject

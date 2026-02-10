@@ -13,7 +13,7 @@ using UnityEngine.Assertions;
 namespace GeunedaEditor.AssetsImporter
 {
 	/// <summary>
-	/// Customizes the visual inspector of the Addressable Ids Generator settings asset <seealso cref="AddressablesIdGeneratorSettings"/>
+	/// Addressable Id 생성기 설정 에셋 <seealso cref="AddressablesIdGeneratorSettings"/>의 비주얼 인스펙터를 커스터마이즈합니다
 	/// </summary>
 	[CustomEditor(typeof(AddressablesIdGeneratorSettings))]
 	public class AddressablesIdGeneratorSettingsEditor : Editor
@@ -35,14 +35,14 @@ namespace GeunedaEditor.AssetsImporter
 		{
 			var settings = (AddressablesIdGeneratorSettings)target;
 			var guiContentFilename = new GUIContent("Script Filename",
-				"Put the script filename that will be generated with all Addressable Ids. " +
-				"This will be also the name of the Object in C# containing all the Addressable Ids and groups.");
+				"모든 Addressable Id와 함께 생성될 스크립트 파일명을 입력하세요. " +
+				"이것은 모든 Addressable Id와 그룹을 포함하는 C# 객체의 이름이기도 합니다.");
 			var guiContentNamespace = new GUIContent("Script Namespace",
-				"Put the script namespace that the Addressable Ids object will be part of.");
+				"Addressable Id 객체가 속할 스크립트 네임스페이스를 입력하세요.");
 			var guiContentLabel = new GUIContent("Addressables Label",
-				"Put the label name that will be used to mark Addressables." +
-				"This mark is used to set what addressables will have ids generated in the new script." +
-				"NOTE: empty label = generate everything that are addressables");
+				"Addressables를 표시하는 데 사용할 레이블 이름을 입력하세요." +
+				"이 표시는 새 스크립트에서 Id가 생성될 Addressable을 설정하는 데 사용됩니다." +
+				"참고: 빈 레이블 = Addressable인 모든 항목을 생성");
 
 			settings.ScriptFilename = EditorGUILayout.TextField(guiContentFilename, settings.ScriptFilename);
 			settings.Namespace = EditorGUILayout.TextField(guiContentNamespace, settings.Namespace);
@@ -256,7 +256,7 @@ namespace GeunedaEditor.AssetsImporter
 
 			for (var i = assetList.Count - 1; i > -1; --i)
 			{
-				// empty label means generate everything
+				// 빈 레이블은 모든 항목을 생성함을 의미합니다
 				if(!string.IsNullOrEmpty(settings.AddressableLabel))
 				{
 					foreach (var label in assetList[i].labels)
@@ -275,7 +275,7 @@ namespace GeunedaEditor.AssetsImporter
 						list.Add(assetList[i]);
 					}
 
-					// Check if is an asset to generate
+					// 생성할 에셋인지 확인합니다
 					if (!assetList[i].labels.Contains(settings.AddressableLabel))
 					{
 						assetList.RemoveAt(i);

@@ -6,7 +6,7 @@ using UnityEngine;
 namespace GeunedaEditor.AssetsImporter
 {
 	/// <summary>
-	/// Scriptable Object tool to import all or specific assets data
+	/// 모든 또는 특정 에셋 데이터를 임포트하는 ScriptableObject 도구
 	/// </summary>
 	[CreateAssetMenu(fileName = "AssetsImporter", menuName = "ScriptableObjects/Editor/AssetsImporter")]
 	public class AssetsImporter : ScriptableObject
