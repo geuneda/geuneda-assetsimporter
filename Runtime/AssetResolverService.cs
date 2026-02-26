@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
-using Geuneda.GameData;
+using Geuneda.DataExtensions;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
