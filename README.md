@@ -1,5 +1,10 @@
 # Geuneda Assets Importer
 
+> ⚠️ **DEPRECATED (2026-07)**: 이 패키지는 `com.geuneda.services` v2.1에 흡수되었습니다.
+> `AssetResolverService`, `AssetsImporter`, `AddressableIds` 기능은 이제 [geuneda-services](https://github.com/geuneda/geuneda-services)에서 제공되며, 네임스페이스는 `Geuneda.Services` / `Geuneda.Services.AssetsImporter`입니다.
+> 신규 프로젝트는 이 패키지 대신 `com.geuneda.services`를 사용하세요. `com.geuneda.services`와 이 패키지를 함께 추가하면 타입 중복 정의로 컴파일이 깨집니다.
+> 이 저장소는 레거시 프로젝트 호환을 위해 유지됩니다.
+
 Unity Addressables의 에셋 로딩 기능을 확장하는 패키지입니다.
 
 ## 개요
